@@ -42,7 +42,7 @@ $$
 
 ## Control actions
 
-From dynamics we can get 4 control actions:
+From dynamics [theory](theory.pdf) we can get 4 control actions:
 
 $$
 \mathbf{U} = 
