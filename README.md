@@ -60,7 +60,7 @@ To build the control we need reference trajectory to track it. This trajectory c
 $$
 \mathbf{X}_{\text{des}} = 
 \begin{bmatrix}
-\phi_d \\ 
+\psi_d \\ 
 z_d \\ 
 y_d \\ 
 x_d
@@ -75,4 +75,4 @@ We compute error of real ad desired state variables separatelly. In each timeste
 
 
 ## Simulation Results
-![results]()
+![results](result.jpg)
