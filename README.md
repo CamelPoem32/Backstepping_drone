@@ -12,7 +12,7 @@ Drones are widely used for monitoring, rescue, supervision, and as aerial base s
 
 ## Dynamics
 
-More exact mathematical equations are in [file](theory.pdf)
+More exact mathematical equations are in [theory](theory.pdf). It was assumed thet our drone doesnt have any gyroscopic effects on flight so this part of real drone dynamics wasn't mentioned.
 
 ## State space
 
@@ -75,7 +75,7 @@ $$
 so we need position trajectory and yaw (for example to make photoes of the puilding we can use spiral trajectory and make yaw agle that will make drone to 'see' the axis of spiral)
 
 ## Backstepping algorithm
-We compute error of real ad desired state variables separatelly. In each timestep we compute main or temporal control action and get wariables for further simulation)
+We compute error of real ad desired state variables separatelly. In each timestep we compute main or temporal control action and get wariables for further simulation. more exactly in [theory](theory.pdf)
 
 
 ## Simulation Results
