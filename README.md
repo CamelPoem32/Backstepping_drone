@@ -36,6 +36,25 @@ x \\
 \text{(State Vector)}
 $$
 
+## Control actions
+
+From dynamics we can get 4 control actions:
+
+$$
+\mathbf{U} = 
+\begin{bmatrix}
+U_1 \\ 
+U_2 \\ 
+U_3 \\ 
+U_4
+\end{bmatrix}
+\quad
+$$
+
+where $U_1$ - thrust and $U_2$, $U_3$, $U_4$ are torques to control orientation angles
+
+
+
 ## Backstepping algorithm
 We compute error of real ad desired state variables separatelly. In each timestep we compute main or temporal control action and get wariables for further simulation)
 
