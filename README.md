@@ -10,5 +10,54 @@ Drones are widely used for monitoring, rescue, supervision, and as aerial base s
 ### Quadrotor Configuration
 ![quadrotor_config (1)](https://github.com/user-attachments/assets/5adbeafc-5d8f-46b1-a386-38cfcd622d14)
 
+## State space
+
+UAV is quite a complicated system with 6 degrees of freedom: 3 for positioning and 3 for orientation
+
+so we made our state space vector of 12 variables: all DoFs and their first derivatives
+
+$$
+\mathbf{X} = 
+\begin{bmatrix}
+\phi \\ 
+p \\ 
+\theta \\ 
+q \\ 
+\psi \\ 
+r \\ 
+z \\ 
+\dot{z} \\ 
+y \\ 
+\dot{y} \\ 
+x \\ 
+\dot{x}
+\end{bmatrix}
+\quad
+\text{(State Vector)}
+$$
+
+## Control actions
+
+From dynamics we can get 4 control actions:
+
+$$
+\mathbf{U} = 
+\begin{bmatrix}
+U_1 \\ 
+U_2 \\ 
+U_3 \\ 
+U_4
+\end{bmatrix}
+\quad
+$$
+
+where $U_1$ - thrust and $U_2$, $U_3$, $U_4$ are torques to control orientation angles
+
+
+
+## Backstepping algorithm
+We compute error of real ad desired state variables separatelly. In each timestep we compute main or temporal control action and get wariables for further simulation)
+
+
 ## Simulation Results
-![results](https://github.com/user-attachments/assets/68c3d840-6bc9-4204-b563-653320d3c51a)
+![results]()
