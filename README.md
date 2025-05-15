@@ -64,7 +64,7 @@ $U_1 = \frac{m}{\cos x_7 \cos x_9} \left( g + \ddot{x}_5^d + z_5 + k_5 \dot{z}_5
 
 $U_2 = \frac{J_x}{l} \left( -f_4 + \ddot{x}_7^d + z_7 + k_7  \right)$
 
-$U_3 = \frac{J_y}{l} \left( -f_5 + \ddot{x}_9^d + z_9 + k_9 \dot{z}_9 - {k_(10)} \right)$
+$U_3 = \frac{J_y}{l} \left( -f_5 + \ddot{x}_9^d + z_9 + k_9 \dot{z}_9 - {k_{xyz}} \right)$
 
 $U_4 = J_z \left( -f_6 + \ddot{x}_{11}^d + z_{11} + k_{11} \dot{z}_{11} - k_{12} z_{12} - \right)$
 
