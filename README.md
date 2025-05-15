@@ -62,7 +62,7 @@ From the Lyapunov functions the controls was derived:
 
 $U_1 = \frac{m}{\cos x_7 \cos x_9} ( g + \ddot{x}_5^d + z_5 + k_5 \dot{z}_5 - k_6 z_6 - \frac{h_z}{m} )$
 
-$U_2 = (J_x / l) ( -f_4 + \ddot{x}_7^d + z_7 + k_7 \dot{z}_7 - k_8 z_8 - (h_\phi / J_x) )$
+$U_2=(J_x/l)(-f_4+\ddot{x}_7^d+z_7+k_7\dot{z}_7-k_8 z_8-(h_\phi / J_x))$
 
 $U_3 = (J_y / l) ( -f_5 + \ddot{x}_9^d + z_9 + k_9 \dot{z}_9 - k_{10} z_{10} - (h_\theta / J_y) )$
 
