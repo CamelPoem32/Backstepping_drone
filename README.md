@@ -61,12 +61,12 @@ From the Lyapunov functions the controls was derived:
 
 $$
 \begin{align}
-    U_1 &= \frac{m}{\cos x_7 \cos x_9} \left( g + \ddot{x}_5^d + z_5 + k_5 \dot{z}_5 - k_6 z_6 - \frac{h_z}{m} \right) \label{eq:U1} \\
-    U_2 &= \frac{J_x}{l} \left( -f_4 + \ddot{x}_7^d + z_7 + k_7 \dot{z}_7 - k_8 z_8 - \frac{h_\phi}{J_x} \right) \label{eq:U2} \\
-    U_3 &= \frac{J_y}{l} \left( -f_5 + \ddot{x}_9^d + z_9 + k_9 \dot{z}_9 - k_{10} z_{10} - \frac{h_\theta}{J_y} \right) \label{eq:U3} \\
-    U_4 &= J_z \left( -f_6 + \ddot{x}_{11}^d + z_{11} + k_{11} \dot{z}_{11} - k_{12} z_{12} - \frac{h_\psi}{J_z} \right) \label{eq:U4} \\
-    U_x &= \frac{m}{U_1} \left( \ddot{x}_1^d + z_1 + k_1 \dot{z}_1 - k_2 z_2 - \frac{h_x}{m} \right) \label{eq:Ux} \\
-    U_y &= \frac{m}{U_1} \left( \ddot{x}_3^d + z_3 + k_3 \dot{z}_3 - k_4 z_4 - \frac{h_y}{m} \right) \label{eq:Uy}
+U_1 &= \frac{m}{\cos x_7 \cos x_9} \left( g + \ddot{x}_5^d + z_5 + k_5 \dot{z}_5 - k_6 z_6 - \frac{h_z}{m} \right) \label{eq:U1} \\
+U_2 &= \frac{J_x}{l} \left( -f_4 + \ddot{x}_7^d + z_7 + k_7 \dot{z}_7 - k_8 z_8 - \frac{h_\phi}{J_x} \right) \label{eq:U2} \\
+U_3 &= \frac{J_y}{l} \left( -f_5 + \ddot{x}_9^d + z_9 + k_9 \dot{z}_9 - k_{10} z_{10} - \frac{h_\theta}{J_y} \right) \label{eq:U3} \\
+U_4 &= J_z \left( -f_6 + \ddot{x}_{11}^d + z_{11} + k_{11} \dot{z}_{11} - k_{12} z_{12} - \frac{h_\psi}{J_z} \right) \label{eq:U4} \\
+U_x &= \frac{m}{U_1} \left( \ddot{x}_1^d + z_1 + k_1 \dot{z}_1 - k_2 z_2 - \frac{h_x}{m} \right) \label{eq:Ux} \\
+U_y &= \frac{m}{U_1} \left( \ddot{x}_3^d + z_3 + k_3 \dot{z}_3 - k_4 z_4 - \frac{h_y}{m} \right) \label{eq:Uy}
 \end{align}
 $$
 
