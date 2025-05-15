@@ -10,6 +10,10 @@ Drones are widely used for monitoring, rescue, supervision, and as aerial base s
 ### Quadrotor Configuration
 ![quadrotor_config (1)](https://github.com/user-attachments/assets/5adbeafc-5d8f-46b1-a386-38cfcd622d14)
 
+## Dynamics
+
+More exact mathematical equations are in [file](theory.pdf)
+
 ## State space
 
 UAV is quite a complicated system with 6 degrees of freedom: 3 for positioning and 3 for orientation (roll, pitch, yaw)
