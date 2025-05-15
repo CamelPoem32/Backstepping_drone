@@ -19,6 +19,7 @@ class Drone(Entity):
         self.trajectory_data = trajectory_data
         self.current_index = 0
         self.trail = []
+        self.trail_d = []
         self.trail_length = 20
         self.time_accumulator = 0
         self.last_time = 0
@@ -115,6 +116,7 @@ class Drone(Entity):
         
         # Position (convert to Ursina coordinate system: X-right, Y-up, Z-forward)
         self.position = (row['x'], row['z'], row['y'])
+        self.position_d = (row['x_d'], row['z_d'], row['y_d'])
         
         # Get rotation angles from CSV (these are in radians)
         roll_rad = row['phi']     # Rotation around X axis (bank)
@@ -164,8 +166,16 @@ class Drone(Entity):
                 scale=0.1,
                 position=self.position
             )
+
+            trail_point_d = Entity(
+                model='sphere',
+                color=color.red,
+                scale=0.1,
+                position=self.position_d
+            )
         
             self.trail.append(trail_point)
+            self.trail_d.append(trail_point_d)
         self.trail_counter += 1
 
         #if len(self.trail) > self.trail_length:
@@ -194,18 +204,29 @@ class SceneSetup:
         DirectionalLight(position=(0, 10, 0), rotation=(45, -45, 45))
         AmbientLight(color=color.rgba(0.4, 0.4, 0.45, 1))
         
-        # Create ground plane
+        # Create ground plane as a flattened cube
         Entity(
-            model='plane',
+            model='cube',
             texture='grass',
-            scale=100,
-            rotation=(90, 0, 0),
-            collider='mesh'
+            scale=(100, 0.1, 100), # Wide and thin
+            rotation=(0, 0, 0),
+            collider='box' # Use 'box' collider for a cube
         )
-        
+        '''
+        # Add transparent cylinder at (0,0,0)
+        # Height = 35, Radius = 2
+        # Position is adjusted so the cylinder stands on the ground plane (y=0 is the base)
+        self.cylinder = Entity(
+            model='cylinder',
+            position=(0, 17.5*0, 0),  # Center at half height (35/2)
+            scale=1,  # Diameter is 2*radius (4 total), height 35
+            color=color.rgba(100, 200, 255, 0.9),  # Light blue with transparency
+            collider='box'  # Optional collision
+        )
+        '''
         # Setup camera controller
         self.player = FirstPersonController(
-            position=(0, 10, -20),
+            position=(0, 35, -15),
             rotation=(0, 0, 0),
             speed=10,
             gravity=0
@@ -267,6 +288,15 @@ if __name__ == '__main__':
     
     # Create drone
     drone = Drone(trajectory_data)
+
+    # Add the partially transparent cylinder in the middle of the trajectory
+    cylinder = Entity(
+        model=Cylinder(resolution=32),
+        color=color.rgba(0.5, 0.5, 0.5, 0.5), # Grey color with 50% alpha
+        position=(0, 0, 0),
+        scale=(5, 35, 5), # Scale applied to the generated mesh
+        collider='cylinder' # Optional: add a collider if needed
+    )
     
     def update():
         drone.update()
